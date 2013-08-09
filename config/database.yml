@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: fabric_development
+  database: fabric_development_oauth_development
   pool: 5
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASS'] %>
@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: fabric_test
+  database: fabric_test_oauth_test
   pool: 5
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASS'] %>
@@ -49,7 +49,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: fabric_production
+  database: fabric_production_oauth_production
   pool: 5
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASS'] %>
