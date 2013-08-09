@@ -12,6 +12,7 @@ gem 'thin'
 gem 'omniauth-twitter'
 gem 'tweetstream'
 gem 'carrierwave'
+gem 'twitter'
 # gem 'backbone-on-rails'
 
 
@@ -47,3 +48,4 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 gem 'unicorn'
+

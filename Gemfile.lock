@@ -241,5 +241,6 @@ DEPENDENCIES
   therubyracer
   thin
   tweetstream
+  twitter
   uglifier (>= 1.0.3)
   unicorn
