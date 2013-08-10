@@ -13,6 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+<<<<<<< HEAD
+=======
 
 notes.txt
 .env
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563

@@ -4,7 +4,10 @@ class SessionsController < ApplicationController
   # end
 
   user = User.from_omniauth(env['omniauth.auth'])
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
    session[:user_id] = user.id
    redirect_to root_url, notice: "Signed in."
   end

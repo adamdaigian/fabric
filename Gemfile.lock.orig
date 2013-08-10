@@ -28,7 +28,10 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+<<<<<<< HEAD
+=======
     addressable (2.3.5)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
     annotate (2.5.0)
       rake
     arel (3.0.2)
@@ -60,7 +63,10 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+<<<<<<< HEAD
+=======
     cookiejar (0.3.0)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
     daemons (1.1.9)
     debug_inspector (0.0.2)
     debugger (1.6.1)
@@ -72,6 +78,8 @@ GEM
     dotenv (0.8.0)
     dotenv-rails (0.8.0)
       dotenv (= 0.8.0)
+<<<<<<< HEAD
+=======
     em-http-request (1.0.3)
       addressable (>= 2.2.3)
       cookiejar
@@ -84,12 +92,16 @@ GEM
       eventmachine (~> 1.0)
       http_parser.rb (~> 0.5)
       simple_oauth (~> 0.1)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+<<<<<<< HEAD
+=======
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
     fssm (0.2.10)
     haml (4.0.3)
       tilt
@@ -100,7 +112,10 @@ GEM
       railties (>= 3.1, < 4.1)
     hashie (2.0.5)
     hike (1.2.3)
+<<<<<<< HEAD
+=======
     http_parser.rb (0.5.3)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (3.0.4)
@@ -119,7 +134,10 @@ GEM
     method_source (0.8.2)
     mime-types (1.23)
     multi_json (1.7.8)
+<<<<<<< HEAD
+=======
     multipart-post (1.2.0)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
     oauth (0.4.7)
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
@@ -177,7 +195,10 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+<<<<<<< HEAD
+=======
     simple_oauth (0.2.0)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
     slop (3.4.6)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -196,6 +217,8 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
+<<<<<<< HEAD
+=======
     tweetstream (2.5.0)
       daemons (~> 1.1)
       em-http-request (~> 1.0.2)
@@ -206,6 +229,7 @@ GEM
       faraday (~> 0.8, < 0.10)
       multi_json (~> 1.0)
       simple_oauth (~> 0.2)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
     tzinfo (0.3.37)
     uglifier (2.1.2)
       execjs (>= 0.3.0)
@@ -214,7 +238,10 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+<<<<<<< HEAD
+=======
     yajl-ruby (1.1.0)
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
 
 PLATFORMS
   ruby
@@ -240,7 +267,10 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   therubyracer
   thin
+<<<<<<< HEAD
+=======
   tweetstream
   twitter
+>>>>>>> 0be5a6eaa2a2aff1bcde2aaecb7c5ed4200cc563
   uglifier (>= 1.0.3)
   unicorn
