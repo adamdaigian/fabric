@@ -2,8 +2,8 @@
 
 <div id="tweets">
 <% @tweets.each do |tweet| %>
-	
-   <h3><%= tweet.user.screen_name %></h3>
-   <div><%= tweet.text %></div>
+	<img src="<%= tweet.user.profile_image_url %>"</img>
+	<h3><%= tweet.user.screen_name %></h3>
+	<div><%= tweet.text %></div>
  <% end %> 
 </div>
