@@ -1,0 +1,8 @@
+<h1>BOoya</h2>
+
+<div id="tweets">
+<% @tweets.each do |tweet| %>
+   <h3><%= tweet.user.screen_name %></h3>
+   <div><%= tweet.text %></div>
+ <% end %>
+</div>
