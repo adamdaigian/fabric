@@ -15,6 +15,7 @@
      <% if current_user %>
        Signed in as @<%= current_user.name %>
        
+       <img src="<%= current_user.profile_image_url %>"></img>
        <%= link_to "Sign out", signout_path %>
      <% else %>
        <%= link_to "Sign in with Twitter", "/auth/twitter" %>
