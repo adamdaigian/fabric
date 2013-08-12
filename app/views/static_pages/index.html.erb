@@ -1,9 +1,10 @@
 <h1>BOoya</h2>
-
 <div id="tweets">
-<% @tweets.each do |tweet| %>
-	<img src="<%= tweet.user.profile_image_url %>"</img>
-	<h3><%= tweet.user.screen_name %></h3>
-	<div><%= tweet.text %></div>
- <% end %> 
+  <% @tweets.each do |tweet| %>
+    <%= render partial: 'tweet', :locals => { :tweet => tweet } %>
+  <% end %>
+
+  <% @tweet_urls.each do |url| %>
+    <%= render partial: 'article', :locals => { :url => url } %>
+  <% end %>
 </div>

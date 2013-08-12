@@ -1,0 +1,1 @@
+ <div class="red"><h1><%= tweet.attrs[:entities][:urls][0][:expanded_url] %></h1></div>
