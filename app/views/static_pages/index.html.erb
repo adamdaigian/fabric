@@ -1,10 +1,12 @@
-<h1>BOoya</h2>
-<div id="tweets">
-  <% @tweets.each do |tweet| %>
-    <%= render partial: 'tweet', :locals => { :tweet => tweet } %>
-  <% end %>
+<% if current_user %>
+  <h1>BOoya</h2>
+  <div id="tweets">
+    <% @tweets.each do |tweet| %>
+      <%= render partial: 'tweet', :locals => { :tweet => tweet } %>
+    <% end %>
 
-  <% @tweet_urls.each do |url| %>
-    <%= render partial: 'article', :locals => { :url => url } %>
-  <% end %>
-</div>
+    <% @tweet_urls.each do |url| %>
+      <%= render partial: 'article', :locals => { :url => url } %>
+    <% end %>
+  </div>
+<% end %>

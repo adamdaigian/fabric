@@ -13,6 +13,7 @@ gem 'omniauth-twitter'
 gem 'tweetstream'
 gem 'carrierwave'
 gem 'twitter'
+gem 'httparty'
 # gem 'backbone-on-rails'
 
 
