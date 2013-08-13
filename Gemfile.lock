@@ -247,6 +247,7 @@ DEPENDENCIES
   compass-rails
   dotenv-rails
   haml-rails
+  httparty
   jquery-rails
   longurl
   meta_request
