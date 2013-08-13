@@ -1,6 +1,4 @@
-<img src="<%= tweet.user.profile_image_url %>"</img>
-<h3><%= tweet.user.screen_name %></h3>
-<div><%= tweet.text %></div>
-<% unless tweet.attrs[:entities][:urls][0].nil? %>
-  <div class="red"><h1><%= tweet.attrs[:entities][:urls][0][:expanded_url] %></h1></div>
-<% end %>
+<img src="<%= tweet.img %>"</img>
+<h3><%= tweet.name %></h3>
+<div><%= tweet.tweet %></div>
+<%= link_to "Checkout Article", "/articles/#{tweet.id}", remote: true %>
