@@ -6,25 +6,24 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <body>
+  <div class="container">
+      <div class="profile"></div>
+        <% unless notice.blank? %>
+            <p class="notice"><%= notice %></p>
+        <% end %>
+        <div id="user_nav">
+           <% if current_user %>
+             Signed in as @<%= current_user.name %>
 
-  <% unless notice.blank? %>
-      <p class="notice"><%= notice %></p>
-  <% end %>
-  <div id="user_nav">
-     <% if current_user %>
-       Signed in as @<%= current_user.name %>
+             <img class="cover-avatar" src="<%= current_user.profile_image_url %>"></img>
+             <%= link_to "Sign out", signout_path %>
+           <% else %>
+             <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+           <% end %>
+      </div> <!-- profile -->
+  <%= yield %>
 
-       <img src="<%= current_user.profile_image_url %>"></img>
-       <%= link_to "Sign out", signout_path %>
-     <% else %>
-       <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-     <% end %>
-   </div>
-
-  <div id="errors"></div>
-
-<%= yield %>
-
+</div> <!-- container -->
 </body>
 </html>
