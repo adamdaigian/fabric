@@ -161,9 +161,9 @@ body {
   padding-bottom: -60px;
 }
 
-.tweet-well-links {
+.tweet-well-link {
   height:auto;
-  margin-top: 5px;
+  margin-top: 10px;
   left:0;
   width: 90%;
   border-top:1px solid #dededc;
@@ -174,13 +174,17 @@ body {
   font-weight:500;
 }
 
-.tweet-well-links > a{
+.tweet-well-link > a {
   font-size:14px;
   color:#b3b3b1;
   font-family:"freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-  font-weight:500;
+  font-weight:700;
   text-decoration:none;
   padding:4px;
+}
+
+.tweet-well-links > a:hover {
+  color:#2d2d2d;
 }
 
 .nickname {
