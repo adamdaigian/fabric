@@ -11,7 +11,7 @@ html, body, .container {
 
 .containter {
   position: absolute;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 html {
@@ -140,6 +140,7 @@ body {
   line-height:1.2;
   padding-bottom:7px;
   height: 20px;
+
 }
 
 .tweet-well-avatar {
@@ -166,7 +167,7 @@ body {
   height:auto;
   margin-top: 10px;
   left:0;
-  width: 95%;
+  width: 100%;
   border-top:1px solid #dededc;
   border-bottom:1px solid #dededc;
   font-size:14px;
@@ -312,6 +313,8 @@ body {
     height:300px;
     top:50px;
     left:0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .wrapper {
