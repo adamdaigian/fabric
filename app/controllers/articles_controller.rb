@@ -11,6 +11,10 @@ class ArticlesController < ApplicationController
         temp_array = readable_content.split("<p>").reverse!
 
         temp_array.each do |sentence|
+
+          sentence.gsub!("<div>", "")
+          sentence.gsub!("</div>", "")
+
           @article.sentences << Sentence.create(content: sentence)
         end
       rescue
