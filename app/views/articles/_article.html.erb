@@ -1,5 +1,10 @@
 </h1 class="paper-article-title"><%= article.name %></h1>
 <% article.sentences.each do |sentence| %>
-  <span class="sentence" id="<%= sentence.id %>"><%= raw sentence.content %></span>
+  <% if sentence.annotations.empty? %>
+    <span class="sentence" id="<%= sentence.id %>"><%= raw sentence.content %></span>
+  <% else %>
+    <i class="icon-bolt icon-annotate"></i>
+    <span class="sentence" id="<%= sentence.id %>"><%= raw sentence.content %></span>
+  <% end %>
 <% end %>
 <div id="annotate_window"></div>
