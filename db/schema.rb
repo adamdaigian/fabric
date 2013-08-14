@@ -11,12 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130813202902) do
+ActiveRecord::Schema.define(:version => 20130813235304) do
+
+  create_table "annotations", :force => true do |t|
+    t.text     "content"
+    t.integer  "sentence_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
+  end
+
+  add_index "annotations", ["sentence_id"], :name => "index_annotations_on_sentence_id"
 
   create_table "articles", :force => true do |t|
     t.string   "url"
     t.text     "content"
-    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "name"
@@ -24,7 +33,19 @@ ActiveRecord::Schema.define(:version => 20130813202902) do
     t.string   "img"
   end
 
-  add_index "articles", ["user_id"], :name => "index_articles_on_user_id"
+  create_table "articles_users", :id => false, :force => true do |t|
+    t.integer "article_id"
+    t.integer "user_id"
+  end
+
+  create_table "sentences", :force => true do |t|
+    t.text     "content"
+    t.integer  "article_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "sentences", ["article_id"], :name => "index_sentences_on_article_id"
 
   create_table "users", :force => true do |t|
     t.string   "provider"

@@ -15,7 +15,8 @@
 
 class User < ActiveRecord::Base
   attr_accessible :name, :provider, :uid
-  has_many :articles
+  has_and_belongs_to_many :articles
+  has_many :annotations
 
   def self.from_omniauth(auth)
     user = where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
