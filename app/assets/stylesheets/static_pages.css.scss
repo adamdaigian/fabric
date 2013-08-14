@@ -102,8 +102,11 @@ body {
 }
 
 .profile {
-  padding:20px 10% 5%;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
   max-width:100%;
+  z-index: 1000;
 }
 
 .well {
@@ -132,9 +135,9 @@ body {
   bottom:0;
   padding:50px 10% 10%;
   width:100%;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 .tweet-well-avatar {
@@ -224,6 +227,11 @@ body {
     padding:40px 10%;
     max-width:100%;
   }
+
+  .profile {
+    padding:40px 10%;
+    max-width:100%;
+  }
 }
 
 @media all and (max-width:500px) {
@@ -268,11 +276,11 @@ body {
   }
 }
 
-@media screen and (max-device-width:1000px) {
-  html {
-    -webkit-text-size-adjust:none;
-  }
-}
+// @media screen and (max-device-width:1000px) {
+//   html {
+//     -webkit-text-size-adjust:none;
+//   }
+// }
 
 ::-moz-selection {
   background-color: #c0392b;

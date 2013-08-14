@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
 </head>
   <body>
   <div class="container">
@@ -12,13 +14,12 @@
         <% unless notice.blank? %>
             <p class="notice"><%= notice %></p>
         <% end %>
-        <div id="user_nav">
-           <% if current_user %>
-             Signed in as @<%= current_user.name %>
+            <% if current_user %>
+            <img class="cover-avatar" src="<%= current_user.profile_image_url %>"></img>
+            <h3 class="cover-nickname">Signed in as @<%= current_user.name %></h3>
 
-             <img class="cover-avatar" src="<%= current_user.profile_image_url %>"></img>
-             <%= link_to "Sign out", signout_path %>
-           <% else %>
+            <%= link_to "Sign out", signout_path %>
+          <% else %>
              <%= link_to "Sign in with Twitter", "/auth/twitter" %>
            <% end %>
       </div> <!-- profile -->

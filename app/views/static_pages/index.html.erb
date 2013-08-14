@@ -1,10 +1,12 @@
 <% if current_user %>
 
 <aside class="cover">
-  <div class="stream" id="tweets">
-    <% @articles.each do |tweet| %>
-      <%= render partial: 'tweet', :locals => { :tweet => tweet } %>
-    <% end %>
+  <div class="stream">
+    <div class="well" id="tweets">
+      <% @articles.each do |tweet| %>
+        <%= render partial: 'tweet', :locals => { :tweet => tweet } %>
+      <% end %>
+    </div> <!-- well -->
   </div>  <!-- stream -->
 </aside> <!-- cover -->
 
