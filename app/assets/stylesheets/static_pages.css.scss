@@ -136,9 +136,9 @@ body {
 }
 
 .tweet-well-title {
-  font-size:24px;
+  font-size:30px;
   line-height:1.2;
-  padding-bottom:5px;
+  padding-bottom:7px;
   height: 20px;
 }
 
@@ -159,6 +159,28 @@ body {
   display: block;
   height: auto;
   padding-bottom: -60px;
+}
+
+.tweet-well-links {
+  height:auto;
+  margin-top: 5px;
+  left:0;
+  width: 90%;
+  border-top:1px solid #dededc;
+  border-bottom:1px solid #dededc;
+  font-size:14px;
+  color:#b3b3b1;
+  font-family:"freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-weight:500;
+}
+
+.tweet-well-links > a{
+  font-size:14px;
+  color:#b3b3b1;
+  font-family:"freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-weight:500;
+  text-decoration:none;
+  padding:4px;
 }
 
 .nickname {
@@ -240,8 +262,9 @@ body {
   }
 
   .wrapper {
+    position:relative;
     left:0;
-    position:relative
+    padding-top: 60px;
   }
 
   .wrapper-paper {
@@ -278,6 +301,12 @@ body {
     height:300px;
     top:50px;
     left:0;
+  }
+
+  .wrapper {
+    position:relative;
+    left:0;
+    padding-top: 60px;
   }
 
   .wrapper-paper {
