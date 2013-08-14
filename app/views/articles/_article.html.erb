@@ -1,5 +1,6 @@
-</h1><%= article.name %></h1>
-<p>ARTICLE BY SENTENCE</p>
-<% article.sentences.reverse.each do |sentence| %>
+<h1><%= article.name %></h1>
+
+<% article.sentences.each do |sentence| %>
   <span class="sentence" id="<%= sentence.id %>"><%= raw sentence.content %></span>
 <% end %>
+<div id="annotate_window"></div>

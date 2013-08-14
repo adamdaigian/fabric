@@ -1,9 +1,8 @@
 $(document).ready(function(){
 
   var renderForm = function(){
-    console.log("called renderForm function")
     selectedSentence = $(this).attr("id")
-    console.log("Clicked sentence" + selectedSentence)
+    console.log("renderForm selected sentence number is " + selectedSentence)
     $.ajax({
       dataType: "script",
       type: "get",
@@ -13,10 +12,17 @@ $(document).ready(function(){
 
   var submitForm = function(){
     sentence_id = $('#sentence_id').val();
-
+    console.log("sentence_id is " + sentence_id);
+    annotation_content = $("#annotation_field").val();
+    console.log("annotation_content is " + annotation_content)
+    $.ajax({
+      dataType: "script",
+      type: "get",
+      url: "/addAnnotation/" + selectedSentence + "/" +  annotation_content //create custom route
+    });
   }; // submitForm
 
   $("body").on("click", ".sentence", renderForm);
-  $("body").on("click", "#submit_annotation", renderForm);
+  $("body").on("click", "#submit_annotation", submitForm);
 
 }); // Doc Ready

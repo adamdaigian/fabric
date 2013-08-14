@@ -3,6 +3,7 @@ Fabric::Application.routes.draw do
   get "signout" => 'sessions#destroy', :as => "signout"
 
   get "/sentence/:id" => 'sentences#annotate'
+  get "/addAnnotation/:sentence_id/:content" => 'sentences#addAnnotation'
 
   # match 'articles/:url' => 'articles#show'
   resources :articles, only: [:show]
