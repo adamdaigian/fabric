@@ -1,4 +1,5 @@
-<%= text_area_tag 'annotation_field' %>
+<div class="annotation">
+<%= text_area_tag 'annotation_field', :placeholder => "Share a thought"%>
 <%= hidden_field_tag 'sentence_id', sentence_id %>
 <%= button_tag "Annotate!", id: "submit_annotation" %>
 
@@ -6,10 +7,12 @@
 
 <% unless annotations.empty? %>
   <% annotations.each do |annotation| %>
-    <p>
-      <%= annotation.user.name %>
-      <img src="<%= annotation.user.profile_image_url %>" />
+
+      <img class="annotation-avatar" src="<%= annotation.user.profile_image_url %>" />
+      <div class="annotation-nickname"><%= annotation.user.name %></div>
       <%= annotation.content %>
-    </p>
+
   <% end %>
 <% end %>
+
+</div>
