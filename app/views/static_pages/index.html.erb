@@ -1,11 +1,18 @@
 <% if current_user %>
-  <h1>BOoya</h2>
-  <div id="tweets">
-    <% @articles.each do |tweet| %>
-      <%= render partial: 'tweet', :locals => { :tweet => tweet } %>
-    <% end %>
-    <br>
-    <h1>Article!!!</h1>
+
+<aside class="cover">
+  <div class="stream">
+    <div class="well" id="tweets">
+      <% @articles.each do |tweet| %>
+        <%= render partial: 'tweet', :locals => { :tweet => tweet } %>
+      <% end %>
+    </div> <!-- well -->
+  </div>  <!-- stream -->
+</aside> <!-- cover -->
+
+<div class="wrapper">
+  <div class="wrapper-paper">
     <div id="article_window"></div>
-  </div>
+  </div> <!-- paper -->
+</div> <!-- wrapper -->
 <% end %>
