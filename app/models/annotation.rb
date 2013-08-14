@@ -11,7 +11,8 @@
 #
 
 class Annotation < ActiveRecord::Base
+
   belongs_to :user
   belongs_to :sentence
-  attr_accessible :content
+  attr_accessible :content, :user_id
 end

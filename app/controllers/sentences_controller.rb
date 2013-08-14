@@ -10,7 +10,7 @@ class SentencesController < ApplicationController
     @annotations = Sentence.find(@sentence_id).annotations
     @content = params[:content]
     s = Sentence.find(@sentence_id)
-    s.annotations << Annotation.create(content: @content)
+    s.annotations << Annotation.create(content: @content, user_id: current_user.id)
   end
 end
 

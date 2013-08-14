@@ -11,11 +11,10 @@ $(document).ready(function(){
 
   var renderForm = function(){
     selectedSentence = $(this).attr("id")
-    console.log("renderForm selected sentence number is " + selectedSentence)
     $.ajax({
       dataType: "script",
       type: "get",
-      url: "/sentence/" + selectedSentence  //create custom route
+      url: "/sentence/" + selectedSentence
     });
   }; // renderForm
 

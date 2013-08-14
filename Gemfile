@@ -14,6 +14,7 @@ gem 'tweetstream'
 gem 'carrierwave'
 gem 'twitter'
 gem 'httparty'
+gem 'font-awesome-rails'
 # gem 'backbone-on-rails'
 
 

@@ -6,6 +6,10 @@
 
 <% unless annotations.empty? %>
   <% annotations.each do |annotation| %>
-    <p><%= annotation.content %></p>
+    <p>
+      <%= annotation.user.name %>
+      <img src="<%= annotation.user.profile_image_url %>" />
+      <%= annotation.content %>
+    </p>
   <% end %>
 <% end %>
