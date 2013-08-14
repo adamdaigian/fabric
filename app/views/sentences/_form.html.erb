@@ -1,0 +1,11 @@
+<%= text_area_tag 'annotation_field' %>
+<%= hidden_field_tag 'sentence_id', sentence.id %>
+<%= button_tag "Annotate!", id: "submit_annotation" %>
+
+<hr>
+
+<% unless annotations.empty? %>
+  <% annotations.each do |annotation| %>
+    <p><%= annotation %></p>
+  <% end %>
+<% end %>
