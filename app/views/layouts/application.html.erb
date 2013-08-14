@@ -10,19 +10,18 @@
 </head>
   <body>
   <div class="container">
-      <div class="profile"></div>
-        <% unless notice.blank? %>
-            <p class="notice"><%= notice %></p>
-        <% end %>
+    <div class="header">
+
             <% if current_user %>
             <img class="cover-avatar" src="<%= current_user.profile_image_url %>"></img>
-            <h3 class="cover-nickname">Signed in as @<%= current_user.name %></h3>
+            <h3 class="cover-nickname">Hello @<%= current_user.name %></h3>
 
             <%= link_to "Sign out", signout_path %>
           <% else %>
              <%= link_to "Sign in with Twitter", "/auth/twitter" %>
            <% end %>
-      </div> <!-- profile -->
+
+    </div> <!-- header -->
   <%= yield %>
 
 </div> <!-- container -->
