@@ -2,6 +2,7 @@
   <% source = open(url).read %>
   <%= raw Readability::Document.new(source, :tags => %w[div p img a strong em], :attributes => %w[src href], :remove_empty_nodes => true).content %>
   <%= "END OF ARTICLE" %>
+
   <br>
 <% rescue %>
   <%= "Error" %>
