@@ -1,26 +1,36 @@
+<div class="annotate-toggle"><i class="icon-remove"></i></div>
 <div class="annotation-inner">
 
   <div class-"annotation-user">
-    <img class="annotation-avatar" src="<%= annotation.user.profile_image_url %>" />
+  <% if current_user %>	
+    <img class="annotation-avatar" src="<%= current_user.profile_image_url %>" />
     <%= text_area_tag 'annotation_field' %>
     <%= hidden_field_tag 'sentence_id', sentence_id %>
-    <%= button_tag "Annotate!", id: "submit_annotation" %>
+    <%= submit_tag "save", id: "submit_annotation" %>
   </div>  
 
-<% unless annotations.empty? %>
-  <% annotations.each do |annotation| %>
-      <ul>
-        <li>
-        <p class="annotator">
-          <img class="annotation-avatar" src="<%= annotation.user.profile_image_url %>" />
-          <div class="annotation-nickname"><%= annotation.user.name %></div>
+<hr>
+
+<div class"annotation-all">
+	<% unless annotations.empty? %>
+  	<% annotations.each do |annotation| %>
+    
+        <p>
+          <img class="annotation-avatar" src="<%= annotation.user.profile_image_url %>"></img>
+          <%= link_to annotation.user.name, user_path(current_user.id)  %>
         </p>
+
         <p class="annotation-content">
           <%= annotation.content %>
         </p>
-        </li>
-      </ul>
-    </div>
-
+    
+ 
+    <% end %>
   <% end %>
 <% end %>
+</div>
+</div>
+
+
+
+

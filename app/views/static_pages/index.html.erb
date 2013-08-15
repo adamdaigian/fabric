@@ -2,7 +2,7 @@
   <aside class="cover">
     <div class="stream">
       <div class="well" id="tweets">
-        <% @articles.each do |tweet| %>
+        <% @articles.first(20).each do |tweet| %>
           <%= render partial: '/shared/tweet', :locals => { :tweet => tweet } %>
         <% end %>
       </div> <!-- well -->
