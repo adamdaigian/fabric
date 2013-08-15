@@ -254,8 +254,6 @@ body {
   padding-right:5%;
 }
 
-
-
 .paper-article-title {
   height:40px;
   border-top:1px solid #dededc;
@@ -330,6 +328,22 @@ body {
   margin-left: 5%;
 }
 
+.wrapper-paper span .sentence {
+  position: relative;
+}
+
+.wrapper-paper i {
+  position: absolute;
+  z-index: 1000;
+  left: -1px;
+  padding-top: 5px;
+  margin-right: 1px;
+}
+
+.wrapper-paper i:hover {
+  color: #c0392b;
+}
+
 /*=====MEDIA QUERIES======*/
 
 @media all and (max-width:1000px) {
@@ -374,6 +388,11 @@ body {
     -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3);
     -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3);
     box-shadow:0 1px 1px rgba(0,0,0,0.3)
+  }
+
+  .wrapper-paper i {
+    padding-left: 5px;
+    left: 2px;
   }
 }
 

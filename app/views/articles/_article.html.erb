@@ -3,7 +3,7 @@
   <% if sentence.annotations.empty? %>
     <span class="sentence" id="<%= sentence.id %>"><%= raw sentence.content %></span>
   <% else %>
-    <i class="icon-bolt icon-annotate"></i>
+    <i class="icon-bolt icon-annotate sentence" id="<%= sentence.id %>"></i>
     <span class="sentence" id="<%= sentence.id %>"><%= raw sentence.content %></span>
   <% end %>
 <% end %>
