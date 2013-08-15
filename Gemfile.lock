@@ -103,7 +103,6 @@ GEM
       railties (>= 3.1, < 4.1)
     hashie (2.0.5)
     hike (1.2.3)
-    hpricot (0.8.6)
     http_parser.rb (0.5.3)
     httparty (0.11.0)
       multi_json (~> 1.0)
@@ -230,10 +229,6 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    url_expander (0.1.5)
-      hpricot
-      httparty (>= 0.6.1)
-      json
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -268,4 +263,3 @@ DEPENDENCIES
   twitter
   uglifier (>= 1.0.3)
   unicorn
-  url_expander

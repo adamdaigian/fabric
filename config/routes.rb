@@ -8,5 +8,6 @@ Fabric::Application.routes.draw do
 
   # match 'articles/:url' => 'articles#show'
   resources :articles, only: [:show]
+  resources :users, only: [:show]
   root :to => 'static_pages#index'
 end
