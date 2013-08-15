@@ -1,18 +1,26 @@
+<div class="annotation-inner">
 
-<%= text_area_tag 'annotation_field' %>
-<%= hidden_field_tag 'sentence_id', sentence_id %>
-<%= button_tag "Annotate!", id: "submit_annotation" %>
-
-<hr>
+  <div class-"annotation-user">
+    <img class="annotation-avatar" src="<%= annotation.user.profile_image_url %>" />
+    <%= text_area_tag 'annotation_field' %>
+    <%= hidden_field_tag 'sentence_id', sentence_id %>
+    <%= button_tag "Annotate!", id: "submit_annotation" %>
+  </div>  
 
 <% unless annotations.empty? %>
   <% annotations.each do |annotation| %>
-
-      <img class="annotation-avatar" src="<%= annotation.user.profile_image_url %>" />
-      <div class="annotation-nickname"><%= annotation.user.name %></div>
-      <%= annotation.content %>
+      <ul>
+        <li>
+        <p class="annotator">
+          <img class="annotation-avatar" src="<%= annotation.user.profile_image_url %>" />
+          <div class="annotation-nickname"><%= annotation.user.name %></div>
+        </p>
+        <p class="annotation-content">
+          <%= annotation.content %>
+        </p>
+        </li>
+      </ul>
+    </div>
 
   <% end %>
 <% end %>
-
-</div>

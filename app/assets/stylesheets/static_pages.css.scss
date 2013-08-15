@@ -11,7 +11,7 @@ html, body, .container {
 
 .containter {
   position: absolute;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 html {
@@ -41,7 +41,8 @@ body {
 
 .container {
   background-color:#fff;
-  height: auto;
+/*  height: 100%;
+  width: 100%;*/
 }
 
 .header {
@@ -119,6 +120,37 @@ body {
 
 .cover {
   position:fixed;
+}
+
+.btn-primary {
+  position:absolute;
+  width:200px;
+  height:30px;
+  background:#c0392b;
+  -webkit-border-radius:4px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+  list-style: none;
+  padding: 10px;
+}
+
+.btn-primary:hover {
+  -moz-box-shadow: 2px 2px 5px #888;
+  -webkit-box-shadow: 2px 2px 5px #888;
+  box-shadow: 2px 2px 5px #888;
+
+}
+
+.btn-primary > a {
+  text-decoration: none;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+li.btn-primary > i {
+  color: #fff;
+  padding: 10px;
 }
 
 /*========STREAM==========*/
@@ -282,9 +314,21 @@ body {
 
 /*=====ANNOTATIONS======*/
 
-// #annotate_window {
-//   width
-// }
+.wrapper-paper span .sentence {
+  position: relative;
+}
+
+.wrapper-paper i {
+  position: absolute;
+  z-index: 1000;
+  left: 93%;
+  padding-top: 5px;
+  margin-right: 1px;
+}
+
+.wrapper-paper i:hover {
+  color: #c0392b;
+}
 
 #wrapper-background {
   background:black;
@@ -300,23 +344,34 @@ body {
 
 #annotate_window {
   background:#fff;
-  position:absolute;
+  position:fixed;
   top:50%;
-  left:50%;
-  width:600px;
-  height:200px;
+  left:35%;
+  width:100%;
+  max-width: 600px;
+  height:300px;
   overflow: auto;
-  margin-top:20%;
-  margin-left: -40%;
+/*  margin-top:20%;
+  margin-left: -40%;*/
   z-index: 3000;
   border-radius:10px;
-      border: 1px solid rgba(0, 0, 0, 0.3);
-      -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding-box;
-      background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.annotation-inner {
+  width:100%;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  max-width:600px;
+  padding:30px 5%;
+  z-index:1000;
 }
 
 .annotation-avatar {
@@ -338,22 +393,6 @@ body {
   margin-left: 5%;
 }
 
-.wrapper-paper span .sentence {
-  position: relative;
-}
-
-.wrapper-paper i {
-  position: absolute;
-  z-index: 1000;
-  left: -1px;
-  padding-top: 5px;
-  margin-right: 1px;
-}
-
-.wrapper-paper i:hover {
-  color: #c0392b;
-}
-
 /*=====MEDIA QUERIES======*/
 
 @media all and (max-width:1000px) {
@@ -370,6 +409,7 @@ body {
     position:relative;
     left:0;
     padding-top: 60px;
+    height:100%; 
   }
 
   .wrapper-paper {
@@ -402,7 +442,7 @@ body {
 
   .wrapper-paper i {
     padding-left: 5px;
-    left: 2px;
+    left: 93%;
   }
 }
 
@@ -411,7 +451,7 @@ body {
     height:200px;
     top:50px;
     left:0;
-    width: 95%;
+    width: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -420,6 +460,7 @@ body {
     position:relative;
     left:0;
     padding-top: 60px;
+    height:100%;  
   }
 
   .wrapper-paper {
@@ -453,6 +494,11 @@ body {
     -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3);
     -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3);
     box-shadow:0 1px 1px rgba(0,0,0,0.3)
+  }
+
+  .wrapper-paper i {
+    padding-left: 5px;
+    left: 93%;
   }
 }
 
