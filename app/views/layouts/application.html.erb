@@ -16,7 +16,7 @@
           <h3 class="cover-nickname">Hello @<%= link_to current_user.name, user_path(current_user.id) %></h3>
           <div class="header-links">
           <%= link_to "My Articles", user_path(current_user.id) %> |
-          <%= link_to "My Tweets", home_path %> |
+          <%= link_to "My Tweets", root_path %> |
           <%= link_to "Sign out", signout_path %>
         </div>
         <% end %>
