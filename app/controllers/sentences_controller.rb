@@ -1,7 +1,6 @@
 class SentencesController < ApplicationController
   def annotate
     @sentence_id = params[:id]
-
     @annotations = Sentence.find(@sentence_id).annotations
   end
 

@@ -5,9 +5,7 @@ $(document).ready(function(){
       var t;
       return t = e.originalEvent.wheelDelta || -e.originalEvent.detail, t > 0 && $(this).scrollTop() <= 0 ? !1 : t < 0 && $(this).scrollTop() >= this.scrollHeight - $(this).height() ? !1 : !0
     })
-  };
-
-  // $('.wrapper').dontScrollParent();
+  }; // $('.wrapper').dontScrollParent();
 
   var renderForm = function(){
     selectedSentence = $(this).attr("id")
@@ -20,9 +18,7 @@ $(document).ready(function(){
 
   var submitForm = function(){
     sentence_id = $('#sentence_id').val();
-    console.log("sentence_id is " + sentence_id);
     annotation_content = $("#annotation_field").val();
-    console.log("annotation_content is " + annotation_content)
     $.ajax({
       dataType: "script",
       type: "get",
@@ -30,6 +26,7 @@ $(document).ready(function(){
     });
   }; // submitForm
 
+  // Event Handlers
   $("body").on("click", ".sentence", renderForm);
   $("body").on("click", "#submit_annotation", submitForm);
 

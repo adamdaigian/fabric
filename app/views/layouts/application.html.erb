@@ -13,10 +13,10 @@
       <div class="header">
         <% if current_user %>
           <img class="cover-avatar" src="<%= current_user.profile_image_url %>"></img>
-          <h3 class="cover-nickname">Hello @<%= current_user.name %></h3>
+          <h3 class="cover-nickname">Hello @<%= link_to current_user.name, user_path(current_user.id) %></h3>
           <%= link_to "Sign out", signout_path %>
-          <%#= render 'splash' %>
-          <%#= link_to "Sign in with Twitter", "/auth/twitter" %>
+          <%= link_to "My Articles", user_path(current_user.id) %>|
+          <%= link_to "My Tweets", home_path %>
         <% end %>
       </div> <!-- header -->
         <% if current_user.nil? %>

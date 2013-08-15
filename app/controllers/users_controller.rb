@@ -3,6 +3,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     annotations = Annotation.where("user_id = ?", params[:id])
     all_articles = annotations.map {|annotation| annotation.sentence.article}
-    @articles = all_articles.uniq{|article| article.name}
+    @articles = all_articles.uniq{|article| article.url}
   end
 end
