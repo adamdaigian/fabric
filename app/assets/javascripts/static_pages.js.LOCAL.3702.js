@@ -27,7 +27,6 @@ $(document).ready(function(){
     });
   }; // submitForm
 
-  // Event Handlers
   $("body").on("click", ".sentence", renderForm);
   $("body").on("click", "#submit_annotation", submitForm);
 

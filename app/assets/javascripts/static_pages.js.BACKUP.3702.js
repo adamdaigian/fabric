@@ -1,8 +1,17 @@
 $(document).ready(function(){
   $("#annotate_window").hide();
 
+<<<<<<< HEAD
 
   // $('.wrapper').dontScrollParent();
+=======
+  $.fn.dontScrollParent = function () {
+    return this.bind("mousewheel DOMMouseScroll", function (e) {
+      var t;
+      return t = e.originalEvent.wheelDelta || -e.originalEvent.detail, t > 0 && $(this).scrollTop() <= 0 ? !1 : t < 0 && $(this).scrollTop() >= this.scrollHeight - $(this).height() ? !1 : !0
+    })
+  }; // $('.wrapper').dontScrollParent();
+>>>>>>> aug14night
 
   var renderForm = function(){
     console.log("renderForm");
@@ -17,9 +26,7 @@ $(document).ready(function(){
   var submitForm = function(){
     console.log("submitForm")
     sentence_id = $('#sentence_id').val();
-    console.log("sentence_id is " + sentence_id);
     annotation_content = $("#annotation_field").val();
-    console.log("annotation_content is " + annotation_content)
     $.ajax({
       dataType: "script",
       type: "get",

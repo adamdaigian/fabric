@@ -2,7 +2,9 @@ $(document).ready(function(){
   $("#annotate_window").hide();
 
 
+
   // $('.wrapper').dontScrollParent();
+
 
   var renderForm = function(){
     console.log("renderForm");
