@@ -1,3 +1,7 @@
 $('span#<%= @sentence_id %>').addClass("annotated")
 $('#annotate_window').empty().append("<%= j render partial: 'form', locals: { sentence_id: @sentence_id, annotations: @annotations }  %>");
 $('#annotate_window').show()
+
+$('.icon-remove').click(function() {
+  $('#annotate_window').hide()
+});

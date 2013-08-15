@@ -1,6 +1,10 @@
 $(document).ready(function(){
   $("#annotate_window").hide();
 
+  $('.icon-remove').click(function() {
+    console.log("wow");
+  });
+
 
   // $('.wrapper').dontScrollParent();
 
