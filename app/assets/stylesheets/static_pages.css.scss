@@ -66,6 +66,10 @@ body {
   color: #c0392b;
 }
 
+.logo {
+  margin-top:120%;
+}
+
 .profile {
   position: relative;
   // top:0;
@@ -488,12 +492,16 @@ li.btn-primary > i {
     position:fixed;
     left:17%;
   }
+
+  .logo {
+    margin-top:0;
+  }
 }
 
 @media all and (max-width:500px) {
   .cover {
     height:200px;
-    top:50px;
+    top:30px;
     left:0;
     width: 100%;
     overflow: auto;
@@ -513,7 +521,7 @@ li.btn-primary > i {
   }
 
   .stream {
-    padding:30px 5%;
+    padding:20px 5%;
     max-width:100%;
   }
 
@@ -521,7 +529,7 @@ li.btn-primary > i {
     position:relative!important;
     width:100%;
     max-width:none;
-    max-height:50px;
+    max-height:30px;
     top:0;
     left:0;
   }
@@ -548,6 +556,10 @@ li.btn-primary > i {
   #annotate_window {
     position:fixed;
     left:5%;
+  }
+
+  .logo {
+    margin-top:0;
   }
 }
 
