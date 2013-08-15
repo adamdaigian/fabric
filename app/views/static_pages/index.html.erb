@@ -3,7 +3,7 @@
     <div class="stream">
       <div class="well" id="tweets">
         <% @articles.each do |tweet| %>
-          <%= render partial: 'tweet', :locals => { :tweet => tweet } %>
+          <%= render partial: '/shared/tweet', :locals => { :tweet => tweet } %>
         <% end %>
       </div> <!-- well -->
     </div>  <!-- stream -->
