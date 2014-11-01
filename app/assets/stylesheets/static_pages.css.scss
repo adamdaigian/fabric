@@ -1,9 +1,6 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {
-  display:block
-}
 
 html, body, .container {
   height:100%;
@@ -91,23 +88,13 @@ body {
 
 .cover {
   position:absolute;
-  z-index:1000;
-  top:100px;
-  left:0;
-  width:30%;
-  height:100%;
-  max-width:500px;
-  background-color: #fff;
-}
-
-.cover {
+  margin-top: 60px;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  max-width: 500px;
   overflow: auto;
-  /*height: auto;*/
 }
-
-/*.cover. img-loaded {
-  background:#000
-}*/
 
 .cover-avatar {
   position: relative;
@@ -473,15 +460,6 @@ li.btn-primary > i {
     max-width:100%;
   }
 
-  .header {
-    position:relative!important;
-    width:100%;
-    max-width:none;
-    max-height:50px;
-    top:0px;
-    left:0;
-  }
-
   .cover-avatar {
     position: relative;
     display: inline-block;
@@ -545,6 +523,7 @@ li.btn-primary > i {
     max-height:30px;
     top:0;
     left:0;
+    padding-bottom: 20px;
   }
 
   .cover-avatar {
@@ -575,7 +554,6 @@ li.btn-primary > i {
     margin-top:0;
   }
 }
-
 
 @media all and (min-width:1666px) {
   .wrapper {
